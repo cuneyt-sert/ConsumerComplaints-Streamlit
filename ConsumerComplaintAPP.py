@@ -43,7 +43,7 @@ def main():
     with col3:
         st.write(' ')
     
-    df = pd.read_csv('complaint30000.csv')
+    df = pd.read_csv('complaint20000.csv')
     df.rename(columns= {"Consumer complaint narrative":"consumer_complaint"},inplace=True)
     df.drop(['Unnamed: 0'], axis='columns', inplace=True)
 
