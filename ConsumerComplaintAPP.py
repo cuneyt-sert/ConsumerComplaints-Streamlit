@@ -50,7 +50,7 @@ def main():
     with col1:
         st.write(' ')
     with col2:
-        st.image("cfpb.png" , width=450)
+        st.image("https://www.consumerfinance.gov/static/img/logo_161x34@2x.fff273f43f0a.png" , width=375)
     with col3:
         st.write(' ')
     
