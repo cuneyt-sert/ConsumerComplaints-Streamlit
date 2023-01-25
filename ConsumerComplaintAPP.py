@@ -46,7 +46,7 @@ def main():
     st.markdown("A Machine Learning App, which aims to predict what consumer complaints are about, has tried to be created.")
     st.markdown("The data are provided from https://www.consumerfinance.gov/data-research/Consumer-complaints/search/.")
     
-    st.image("cfpb.jpg" , width=450)
+    st.image("cfpb.png" , width=450)
 
     
     st.markdown("The topics related to customer complaints are shown in the Product column in the dataset.")
