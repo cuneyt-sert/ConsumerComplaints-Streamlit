@@ -42,12 +42,29 @@ def main():
         st.image("https://t3.ftcdn.net/jpg/00/47/31/46/240_F_47314660_FrEaRx6KeHjYJMajIGzXiPxhcQR61Qw7.jpg", width=300)
     with col3:
         st.write(' ')
+
+    st.markdown("A Machine Learning App, which aims to predict what consumer complaints are about, has tried to be created.")
+    st.markdown("The data are provided from https://www.consumerfinance.gov/data-research/Consumer-complaints/search/.")
     
+    st.image("cfpb.jpg" , width=450)
+
+    
+    st.markdown("The topics related to customer complaints are shown in the Product column in the dataset.")
+    st.markdown("The details of the Product column are as follows:")
+    st.markdown(         '-' "Credit_reporting")
+    st.markdown(         '-' "Mortgages_and_Loans")
+    st.markdown(         '-' "Credit_card")   
+    st.markdown(         '-' "Personal_banking")
+    st.markdown(         '-' "Debt_collection")
+
+    st.markdown("The data were analyzed using the **`Logistic Regression`** model and **`TFIDF`** approach was adopted to detect text similarities.")
+    st.markdown("An example from the data set is as follows:")
+
     df = pd.read_csv('complaint10000.csv')
     df.rename(columns= {"Consumer complaint narrative":"consumer_complaint"},inplace=True)
     df.drop(['Unnamed: 0'], axis='columns', inplace=True)
 
-    st.table(df.sample(3, random_state=45))
+    st.table(df.sample(1, random_state=45))
 
 
     if choice == "Home":
@@ -55,7 +72,7 @@ def main():
 
                 
         with st.form(key='complaint text'):
-            raw_text=st.selectbox("Select", df["consumer_complaint"])
+            raw_text=st.selectbox("Please select from the list below And click submit button to see the results.", df["consumer_complaint"])
             submit_text = st.form_submit_button(label='Submit')            
                           
                 
@@ -88,6 +105,7 @@ def main():
     else:
         st.subheader("About")
 
+        
 
 if __name__=='__main__':
     main()
