@@ -46,7 +46,7 @@ def main():
     st.markdown("A Machine Learning App, which aims to predict what consumer complaints are about, has tried to be created.")
     st.markdown("The data are provided from https://www.consumerfinance.gov/data-research/Consumer-complaints/search/.")
     
-   col1, col2, col3 = st.columns(3)
+    col1, col2, col3 = st.columns(3)
     with col1:
         st.write(' ')
     with col2:
