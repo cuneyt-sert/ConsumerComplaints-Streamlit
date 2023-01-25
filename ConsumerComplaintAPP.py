@@ -50,7 +50,7 @@ def main():
     with col1:
         st.write(' ')
     with col2:
-        st.image("cfpb.jpg" , width=450)
+        st.image("cfpb.png" , width=450)
     with col3:
         st.write(' ')
     
